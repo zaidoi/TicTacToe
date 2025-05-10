@@ -1,3 +1,8 @@
+:root{
+    --up:20px;
+    
+}
+
 *{
     margin: 0%;
     padding: 0%;
@@ -28,11 +33,18 @@ button{
     display: flex;
     flex-wrap: wrap;
 }
-.box{
-    background-color: aliceblue;
-    height: 80px;
+.row{
+    display: flex;
+}
+.col{
+    height: 60px;
+    width: 60px;
     border: 1px solid black;
-    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+cursor: pointer;
 }
 input{
     height: 30px;

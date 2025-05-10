@@ -11,25 +11,29 @@
     <h4>Made By Zaid Badgujar</h4>
     <div class="main">
         <form >
-            <label for="player1">Player1</label>
-            <input type="text">
+            <label for="player1" >Player1</label>
+            <input type="text" id="player1">
             <label for="player2">Player2</label>
-            <input type="text">
-            <button type="submit">Start Game</button>
+            <input type="text" id="player2">
+            <button type="submit" id="btngame">Start Game</button>
         </form>
 
         <div class="gameboard">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-
+            <div class="row">
+                <div onclick="handleClick(this)" id="0" class="col"></div>
+                <div onclick="handleClick(this)" id="1" class="col"></div>
+                <div onclick="handleClick(this)" id="2" class="col"></div>
+            </div>
+            <div class="row">
+                <div onclick="handleClick(this)" id="3" class="col"></div>
+                <div onclick="handleClick(this)" id="4" class="col"></div>
+                <div onclick="handleClick(this)" id="5" class="col"></div>
         </div>
+        <div class="row">
+            <div onclick="handleClick(this)" id="6" class="col"></div>
+            <div onclick="handleClick(this)" id="7" class="col"></div>
+            <div onclick="handleClick(this)" id="8" class="col"></div>
+    </div>
     </div>
 
 <script src="script.js"></script>

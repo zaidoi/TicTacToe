@@ -1,28 +1,15 @@
-(function (){
+const btn = document.querySelector("#btngame")
+let player1;
+let player2;
 
-    const gameBoard = {}
-    const btnStartgame = document.getElementById("btngame")
-    
-    btnStartgame.addEventListener("click",function(e){
-        e.preventDefault()
-        const player1 = document.getElementById("player1").value;
-        const player2 = document.getElementById("player2").value;
-        console.log(player1,player2);
-    })
-    
-    function gameLogic(){
-        let input = "X"
-        if(input == "X"){
-            input = "0"
-        } else if(input == "0"){
-            input =" X"
-        }
-    }
-    
-    
-    
-})();
 
+btn.addEventListener("click",function(e){
+    e.preventDefault()
+ player1 = document.querySelector("#player1").value
+ player2 = document.querySelector("#player2").value
+document.querySelector('form').classList.toggle("form")
+console.log(player1,player2);
+})
 
 
 ///
@@ -38,10 +25,15 @@ function checkWinner(){
         (arr[1] !== null && arr[1] == arr[4] && arr[4] == arr[7]) ||
         (arr[2] !== null && arr[2] == arr[5] && arr[5] == arr[8]) ||
         (arr[0] !== null && arr[0] == arr[4] && arr[4] == arr[8]) ||
-        (arr[2] !== null && arr[2] == arr[4] && arr[4] == arr[6])){
-        
-            document.write(`Winner is ${start}`)
-    } if(!arr.some((e) => e === null)){
+        (arr[2] !== null && arr[2] == arr[4] && arr[4] == arr[6]))
+        { 
+        if(start == "X") {
+            document.write(`Winner is ${player1}`)
+        } else {
+            document.write(`Winner is ${player2}`)
+        }
+        } 
+    if(!arr.some((e) => e === null)){
         document.write("Draw!!")
         return;
     }

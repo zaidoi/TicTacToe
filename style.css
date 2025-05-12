@@ -2,7 +2,9 @@
     --up:20px;
     
 }
-
+.form{
+   display:none;
+}
 *{
     margin: 0%;
     padding: 0%;
